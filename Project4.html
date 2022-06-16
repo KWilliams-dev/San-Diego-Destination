@@ -1,0 +1,179 @@
+<html>
+    <head>
+        <title>Summer Destination</title>
+        <link href = "https://fonts.googleapis.com/css?family=Montserrat:400,800" rel = "stylesheet">
+        <link href = "Project4.css" rel = "stylesheet">
+    </head>
+    <body>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+
+        </script>
+
+        <script type = "text/javascript">
+            $(document).ready(function() {
+
+                $("#more1").click(function() {
+                    $(".food").fadeIn(1000)
+                })
+
+                $("#less1").click(function() {
+                    $(".food").fadeOut(500)
+                    $(".skate").fadeOut(500)
+                    $(".scenery").fadeOut(500)
+                })
+
+                $("#more2").click(function() {
+                    $(".skate").fadeIn(1000)
+                })
+
+                $("#less2").click(function() {
+                    $(".skate").fadeOut(500)
+                    $(".scenery").fadeOut(500)
+                })
+
+                $("#more3").click(function() {
+                    $(".scenery").fadeIn(1000)
+                })
+
+                $("#less3").click(function() {
+                    $(".scenery").fadeOut(500)
+                })
+                
+            });
+        </script>
+
+    <div class = "header">
+        <div class = "inner_header">
+            <div class="logo_container">
+                <h1>SAN DIEGO<span>CALIFORNIA</span></h1>
+            </div>
+            <ul class="navigation">
+                <a href="Project4.html"><li>Home</li></a>
+                <a href="Project4About.html"><li>About</li></a>
+                <a><li>Gallery</li></a>
+                <a><li>Contact</li></a>
+            </ul>
+        </div>
+    </div>
+
+    <div class = "slideshow-container">
+        <div class = "slideFade fade">
+            <div class = "numbertext">1 / 3</div>
+            <img src = "../Images/sunset.jpg" style="width: 100%; height: 75%;">
+            <div class = "text">Sunset Cliffs</div>
+        </div>
+
+        <div class = "slideFade fade">
+            <div class = "numbertext">2 / 3</div>
+            <img src = "../Images/city.jpg" style="width: 100%; height: 75%;">
+            <div class = "text">San Diego at Night</div>
+        </div>
+
+        <div class = "slideFade fade">
+            <div class = "numbertext">3 / 3</div>
+            <img src = "../Images/flamingo.jpg" style="width: 100%; height: 75%;">
+            <div class = "text">Flamingo</div>
+        </div>
+
+        <a class = "prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class = "next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <div style="text-align: center;">
+        <span class ="dot" onclick = "currentSlide(1)"></span>
+        <span class ="dot" onclick = "currentSlide(2)"></span>
+        <span class ="dot" onclick = "currentSlide(3)"></span>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n){
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slideFade");
+            let dots = document.getElementsByClassName("dot");
+
+            if(n > slides.length) {slideIndex = 1};
+
+            if(n < 1){slideIndex = slides.length};
+
+            for(i = 0; i < slides.length; i++){
+                slides[i].style.display = "none";
+            }
+
+            for(i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active"
+        }
+    </script>
+    <br><br>
+
+    <h1 id = "overview">Brief Overview</h1><br><br>
+
+    <div class="paragraph" style="width: 100%;">
+        <p>
+            One of my favorite things to do in San Diego, CA is surf. The waves are perfect for beginners.
+            Although, it's still very difficult to get the hang of it. While your waiting for a wave, you 
+            can enjoy the scenery around you. There's palm trees on the board walk, hills/cliffs in the
+            distance, and perfect weather.
+        </p>
+        <button id = "more1">More</button>
+        <button id = "less1">Less</button>
+    </div>
+    <br><br>
+
+    <div class="paragraph" style="width: 100%;">
+        <h2 class = "food">Food</h2>
+
+        <p class = "food">
+            The food in San Diego is incredible. I didn't have one bad tasting meal last time I was there.
+            From tauqitos, to bowls of ramen, you can pretty much find any type of food there that you like.
+            My personal favorite was the taquitos that I got from this little hole in the wall place.
+        </p>
+        <button class = "food" id = "more2">More</button>
+        <button class = "food" id = "less2">Less</button>
+    </div>
+    <br><br>
+
+    <div class="paragraph" style="width: 100%;">
+        <h2 class = "skate">Skating</h2>
+
+        <p class = "skate">
+            Not everyone enjoys this but another really fun thing to do is skate the boardwalk.
+            It's also a lot of fun because you won't be the only one. Many people bring out there skates,
+            skateboards, or bikes to enjoy the scenery at a faster pace. You just have to watch out for 
+            other people since it's usually a little busy.
+        </p>
+
+        <button class = "skate" id = "more3">More</button>
+        <button class = "skate" id = "less3">Less</button>
+    </div>
+    <br><br>
+
+    <div class="paragraph" style="width: 100%;">
+        <h2 class = "scenery">Adventuring</h2>
+
+        <p class = "scenery">
+            Not everyone enjoys this but another really fun thing to do is skate the boardwalk.
+            It's also a lot of fun because you won't be the only one. Many people bring out there skates,
+            skateboards, or bikes to enjoy the scenery at a faster pace. You just have to watch out for 
+            other people since it's usually a little busy.
+        </p>
+    </div>
+    <br><br>
+
+    </body>
+</html>

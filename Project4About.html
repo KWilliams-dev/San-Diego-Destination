@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <title>About San Diego</title>
+        <link href = "Project4.css" rel = "stylesheet">
+        <link href = "https://fonts.googleapis.com/css?family=Montserrat:400,800" rel = "stylesheet">
+    </head>
+    <body>
+
+        <script src = "https://www.w3schools.com/lib/w3.js">
+
+        </script>
+
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+
+        </script>
+
+        <script type = "text/javascript">
+            $(document).ready(function() {
+
+                $("#bar").click(function() {
+                    $("#panel").slideToggle(1000);
+                    $("#panel1").fadeOut(1000);
+                    $("#panel2").fadeOut(1000);
+                });
+
+                $("#bar1").click(function() {
+                    $("#panel1").slideToggle(1000);
+                    $("#panel").fadeOut(1000);
+                    $("#panel2").fadeOut(1000);
+                });
+
+                $("#bar2").click(function() {
+                    $("#panel2").slideToggle(1000);
+                    $("#panel1").fadeOut(1000);
+                    $("#panel").fadeOut(1000);
+                });
+
+                $("#ramen").click(function() {
+                    $("#ramenImg").fadeToggle(1000);
+                });
+
+                $("#tacos").click(function() {
+                    $("#tacosImg").fadeToggle(1000);
+                });
+
+                $("#thai").click(function() {
+                    $("#thaiImg").fadeToggle(1000);
+                });
+            });
+        </script>
+
+        
+        
+        <div class = "header">
+            <div class = "inner_header">
+                <div class="logo_container">
+                    <h1>SAN DIEGO<span>CALIFORNIA</span></h1>
+                </div>
+                <ul class="navigation">
+                    <a href="Project4.html"><li>Home</li></a>
+                    <a href="Project4About.html"><li>About</li></a>
+                    <a><li>Gallery</li></a>
+                    <a><li>Contact</li></a>
+                </ul>
+            </div>
+        </div> <br><br>
+
+        <h1 style="text-align: center; font-size: 50px;">About San Diego</h1><br><br>
+
+        <div class="paragraphAbout">
+            <h2>History</h2>
+            <p>
+                San Diego is the first city on the west coast that is entered upon crossing the mexico border into the united states.
+                California did not become a part of the U.S. until 1850. Joshua H. Bean was elected the first mayor of the city.
+                The area known as Old Town San Diego State Historic Park was once the original town of San Diego.
+            </p>
+            <div id = "bar" style="width: 200px;">
+                Show Picture
+            </div>
+    
+            <div id = "panel">
+                <img src = "../Images/oldtown.jpg" width="720px;">
+            </div>
+
+        </div><br>
+
+        <div class="paragraphAbout">
+            <h2>Weather</h2>
+            <p>
+                The weather is beautiful in San Diego. It stays at around 75 degrees during the summer.
+                The only down side is that the ocean water is very cold so it's very important to wear a wet suit.
+            </p>
+            <div id = "bar1" style="width: 150px;">
+                Show Pictures
+            </div>
+
+            <div id = "panel1">
+                <img class = "slideshow1" src = "../Images/sandiego.jpg" width="420px;" height="720px;">
+                <img class = "slideshow1" src = "../Images/palmtrees.jpg" width="420px;" height="720px;">
+                <img class = "slideshow1" src = "../Images/park.jpg" width="420px;" height="720px;">
+            </div>
+
+            <script>
+                w3.slideshow(".slideshow1", 3000);
+            </script>
+        </div><br>
+
+        
+        <div class="paragraphAbout" style>
+            <h2>Types of Food You'll Find In San Diego: </h2>
+            <p>
+            <div id = "table">
+                <ul>
+                    <button id = "ramen"><li >Ramen</li></button>
+                    <button id = "tacos"><li>Tacos</li></button>
+                    <button id = "thai"><li>Curry</li></button>
+                </ul>
+            </div>
+            </p>
+        
+        </div><br>
+
+            <img id = "ramenImg" src = "../Images/ramen.jpg" width="520px;" height="420px;" style="display: none; position: relative;">
+            <img id = "tacosImg" src = "../Images/tacos.jpg" width="660px;" height="420px;" style="display: none;">
+            <img id = "thaiImg" src = "../Images/thai.jpg" width="660px;" height="420px;" style="display: none;">
+        
+    </body>
+</html>
